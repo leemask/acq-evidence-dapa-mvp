@@ -1,0 +1,660 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-09-15T10:51:05.125Z",
+  "claimStatus": "diagnostic_only",
+  "warning": "사람의 독립 판정과 합의가 완료되지 않은 부트스트랩 평가셋입니다. 아래 검색 수치는 성능 달성값으로 사용할 수 없습니다.",
+  "dataset": {
+    "code": "dtaq_core_rd_projects",
+    "versionDate": "2025-08-28",
+    "recordCount": 1194,
+    "sourceSha256": "cfbd30848f62f4f439b9247f8d3cb4b2cb4b2cdaa3c4dc1df44a570da7940d6d"
+  },
+  "evaluationSet": {
+    "id": "dapa2-bootstrap-challenge-set",
+    "version": "0.1",
+    "caseCount": 15,
+    "humanAdjudicatedCount": 0,
+    "status": "not_started"
+  },
+  "corpusIntegrity": {
+    "status": "pass",
+    "checkedAt": "2026-09-15T10:50:57.284Z",
+    "source": {
+      "code": "dtaq_core_rd_projects",
+      "versionDate": "2025-08-28",
+      "sourceSha256": "cfbd30848f62f4f439b9247f8d3cb4b2cb4b2cdaa3c4dc1df44a570da7940d6d",
+      "recordCount": 1194
+    },
+    "checks": [
+      {
+        "id": "source_sha256",
+        "label": "원본 파일 SHA-256",
+        "status": "pass",
+        "detail": "cfbd30848f62f4f439b9247f8d3cb4b2cb4b2cdaa3c4dc1df44a570da7940d6d"
+      },
+      {
+        "id": "record_count",
+        "label": "원본·인덱스 건수 일치",
+        "status": "pass",
+        "detail": "1194 raw / 1194 indexed"
+      },
+      {
+        "id": "unique_external_ids",
+        "label": "과제 관리번호 고유성",
+        "status": "pass",
+        "detail": "1194/1194"
+      },
+      {
+        "id": "title_coverage",
+        "label": "과제명 필드 완전성",
+        "status": "pass",
+        "detail": "1194/1194"
+      },
+      {
+        "id": "record_hash_recomputation",
+        "label": "레코드 SHA-256 재계산",
+        "status": "pass",
+        "detail": "1194/1194"
+      },
+      {
+        "id": "ui_field_allowlist",
+        "label": "공개 UI 필드 허용목록",
+        "status": "pass",
+        "detail": "15개 허용 필드만 포함"
+      }
+    ],
+    "summary": {
+      "passed": 6,
+      "total": 6,
+      "recordHashFailures": [],
+      "unexpectedFields": []
+    }
+  },
+  "provisionalMetrics": {
+    "hitAt5": 1,
+    "recallAt10": 0.767,
+    "meanReciprocalRank": 1,
+    "ndcgAt10": 0.92,
+    "evidenceIntegrity": 1
+  },
+  "metricAvailability": {
+    "precisionAt5": "pending_exhaustive_top5_judgment",
+    "recallAt10": "diagnostic_only",
+    "ndcgAt10": "diagnostic_only"
+  },
+  "releaseGates": [
+    {
+      "id": "corpus_integrity",
+      "label": "원본·인덱스 무결성",
+      "status": "pass"
+    },
+    {
+      "id": "evidence_integrity",
+      "label": "근거 계약 정확도 ≥ 0.95",
+      "status": "pass"
+    },
+    {
+      "id": "human_labels",
+      "label": "평가셋 독립 판정·합의",
+      "status": "pending"
+    },
+    {
+      "id": "recall_at_10",
+      "label": "Recall@10 ≥ 0.85",
+      "status": "pending"
+    }
+  ],
+  "cases": [
+    {
+      "id": "EVAL-001",
+      "title": "탑재 센서용 초경량 AI 추론",
+      "riskTags": [
+        "edge-ai",
+        "deliverable-overlap"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2022-12-0006",
+        "R-2022-04-0058"
+      ],
+      "topResults": [
+        {
+          "id": "R-2022-12-0006",
+          "title": "무기체계 전자부품/단말 탑재형 온센서 AI 지원 초경량 인공지능 컴퓨팅 SW 플랫폼 핵심기술 개발 연구",
+          "score": 100
+        },
+        {
+          "id": "R-2024-08-0011",
+          "title": "기체 상 화생 작용제 겸용 탐지식별을 위한 머신러닝이 적용된 플라즈모닉 금속 유기 골격체 기반 소형 광학 센서 개발(2단계)",
+          "score": 61
+        },
+        {
+          "id": "R-2022-02-0021",
+          "title": "저고도용 다중대역 SAR 기반 실시간 영상화 시스템 기술 개발",
+          "score": 58
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 0.5,
+        "reciprocalRank": 1,
+        "ndcgAt10": 0.7871546029909718,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-002",
+      "title": "온보드 SAR 표적 식별",
+      "riskTags": [
+        "semantic-paraphrase",
+        "sensor"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2023-05-0024"
+      ],
+      "topResults": [
+        {
+          "id": "R-2023-05-0024",
+          "title": "딥러닝을 이용한 온보드 SAR 표적식별 기술",
+          "score": 76
+        },
+        {
+          "id": "R-2024-07-0026",
+          "title": "무인잠수정용 소형 장거리 고해상 수상감시정찰 기술",
+          "score": 64
+        },
+        {
+          "id": "R-2024-08-0011",
+          "title": "기체 상 화생 작용제 겸용 탐지식별을 위한 머신러닝이 적용된 플라즈모닉 금속 유기 골격체 기반 소형 광학 센서 개발(2단계)",
+          "score": 62
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 1,
+        "reciprocalRank": 1,
+        "ndcgAt10": 1,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-003",
+      "title": "저고도 다중대역 SAR 영상화",
+      "riskTags": [
+        "multi-stage",
+        "duplicate-family"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2022-02-0021",
+        "R-2024-08-0018"
+      ],
+      "topResults": [
+        {
+          "id": "R-2022-02-0021",
+          "title": "저고도용 다중대역 SAR 기반 실시간 영상화 시스템 기술 개발",
+          "score": 99
+        },
+        {
+          "id": "R-2024-08-0018",
+          "title": "저고도용 다중대역 SAR 기반 실시간 영상화 시스템(2단계)",
+          "score": 90
+        },
+        {
+          "id": "R-2023-05-0024",
+          "title": "딥러닝을 이용한 온보드 SAR 표적식별 기술",
+          "score": 46
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 1,
+        "reciprocalRank": 1,
+        "ndcgAt10": 1,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-004",
+      "title": "전장환경 영상탐색기 강건성",
+      "riskTags": [
+        "same-keyword-different-scope"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2024-12-0001",
+        "R-2024-12-0009"
+      ],
+      "topResults": [
+        {
+          "id": "R-2024-12-0001",
+          "title": "다양한 전장 환경에 대한 항공표적용 영상탐색기 탐지/인식 강건성 향상 기술 연구",
+          "score": 96
+        },
+        {
+          "id": "R-2011-01-1072",
+          "title": "소프트웨어설계",
+          "score": 72
+        },
+        {
+          "id": "R-2014-02-0011",
+          "title": "소프트웨어설계",
+          "score": 72
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 0.5,
+        "reciprocalRank": 1,
+        "ndcgAt10": 0.9173194127129571,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-005",
+      "title": "레이더 소형표적 머신러닝 추적",
+      "riskTags": [
+        "generic-ai-terms",
+        "radar"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2020-08-0007",
+        "R-2024-07-0056"
+      ],
+      "topResults": [
+        {
+          "id": "R-2020-08-0007",
+          "title": "머신러닝기반 레이더용 소형 표적 탐지/추적 기술",
+          "score": 91
+        },
+        {
+          "id": "R-2024-07-0026",
+          "title": "무인잠수정용 소형 장거리 고해상 수상감시정찰 기술",
+          "score": 81
+        },
+        {
+          "id": "R-2024-07-0056",
+          "title": "표적 탐지 정확도 향상 및 인공지능을 이용한 표적/비표적 분류/식별 기술",
+          "score": 77
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 1,
+        "reciprocalRank": 1,
+        "ndcgAt10": 0.95583058934618,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-006",
+      "title": "AI 반도체 사물인식 플랫폼",
+      "riskTags": [
+        "hardware-software-boundary"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2022-04-0058",
+        "R-2022-12-0006"
+      ],
+      "topResults": [
+        {
+          "id": "R-2022-04-0058",
+          "title": "고효율 AI 반도체 기반 고속·고정밀 사물인식 및 추적지원 플랫폼 개발",
+          "score": 89
+        },
+        {
+          "id": "R-2022-12-0006",
+          "title": "무기체계 전자부품/단말 탑재형 온센서 AI 지원 초경량 인공지능 컴퓨팅 SW 플랫폼 핵심기술 개발 연구",
+          "score": 81
+        },
+        {
+          "id": "R-2024-08-0011",
+          "title": "기체 상 화생 작용제 겸용 탐지식별을 위한 머신러닝이 적용된 플라즈모닉 금속 유기 골격체 기반 소형 광학 센서 개발(2단계)",
+          "score": 69
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 1,
+        "reciprocalRank": 1,
+        "ndcgAt10": 1,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-007",
+      "title": "AI 수중기뢰 탐지",
+      "riskTags": [
+        "underwater",
+        "adjacent-project"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2024-07-0049",
+        "R-2024-07-0048"
+      ],
+      "topResults": [
+        {
+          "id": "R-2024-07-0049",
+          "title": "AI 기반 수중기뢰 탐지 기술",
+          "score": 77
+        },
+        {
+          "id": "R-2022-12-0006",
+          "title": "무기체계 전자부품/단말 탑재형 온센서 AI 지원 초경량 인공지능 컴퓨팅 SW 플랫폼 핵심기술 개발 연구",
+          "score": 72
+        },
+        {
+          "id": "R-2024-07-0026",
+          "title": "무인잠수정용 소형 장거리 고해상 수상감시정찰 기술",
+          "score": 70
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 0.5,
+        "reciprocalRank": 1,
+        "ndcgAt10": 0.7871546029909718,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-008",
+      "title": "무인잠수정 탑재 저주파 SAS",
+      "riskTags": [
+        "acronym",
+        "underwater"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2024-07-0048",
+        "R-2024-07-0049"
+      ],
+      "topResults": [
+        {
+          "id": "R-2024-07-0048",
+          "title": "기뢰탐색용 무인잠수정 탑재형 저주파 SAS 기술",
+          "score": 84
+        },
+        {
+          "id": "R-2024-07-0026",
+          "title": "무인잠수정용 소형 장거리 고해상 수상감시정찰 기술",
+          "score": 65
+        },
+        {
+          "id": "R-2024-12-0009",
+          "title": "저피탐 무인비행체 탑재 매립형 EOTS 설계 기술",
+          "score": 57
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 1,
+        "reciprocalRank": 1,
+        "ndcgAt10": 0.8996052605611106,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-009",
+      "title": "무인전투차량 VILS",
+      "riskTags": [
+        "platform",
+        "simulation"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2024-07-0050",
+        "R-2024-07-0052"
+      ],
+      "topResults": [
+        {
+          "id": "R-2024-07-0050",
+          "title": "능동형 무인전투차량 VILS 플랫폼 기술",
+          "score": 94
+        },
+        {
+          "id": "R-2024-07-0078",
+          "title": "지능형 전장상황인지 통합검증 플랫폼 기술",
+          "score": 45
+        },
+        {
+          "id": "R-2024-07-0079",
+          "title": "Heli-borne MUM-T용 유인헬기 플랫폼 설계 및 체계종합 기술",
+          "score": 45
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 0.5,
+        "reciprocalRank": 1,
+        "ndcgAt10": 0.7871546029909718,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-010",
+      "title": "군집 무인잠수정 임무제어",
+      "riskTags": [
+        "swarm",
+        "network-vs-control"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2024-07-0046",
+        "R-2024-07-0047"
+      ],
+      "topResults": [
+        {
+          "id": "R-2024-07-0046",
+          "title": "군집 무인잠수정 임무 제어 및 통합 기술",
+          "score": 82
+        },
+        {
+          "id": "R-2023-03-0008",
+          "title": "드로그를 이용한 무인잠수정 진·회수 도킹 시스템 개발",
+          "score": 55
+        },
+        {
+          "id": "R-2024-06-0018",
+          "title": "유·무인복합화생방 정찰차 적용을 위한 핵심임무장비 최적화 및 통합운용 기술개발",
+          "score": 43
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 1,
+        "reciprocalRank": 1,
+        "ndcgAt10": 0.9073218002554915,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-011",
+      "title": "무인지상차량 사이버 복원력",
+      "riskTags": [
+        "cyber",
+        "platform-specific"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2024-06-0003"
+      ],
+      "topResults": [
+        {
+          "id": "R-2024-06-0003",
+          "title": "무인지상차량 사이버 레질리언스 검증 모의침투 자동화 기술",
+          "score": 100
+        },
+        {
+          "id": "R-2022-04-0036",
+          "title": "지능형 사이버 훈련 기술",
+          "score": 58
+        },
+        {
+          "id": "R-2022-04-0037",
+          "title": "사이버전장관리 인공지능 모델 보안 기술",
+          "score": 57
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 1,
+        "reciprocalRank": 1,
+        "ndcgAt10": 1,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-012",
+      "title": "이중대역 적외선 미사일 탐지",
+      "riskTags": [
+        "sensor",
+        "target-type"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2024-07-0036",
+        "R-2024-12-0001"
+      ],
+      "topResults": [
+        {
+          "id": "R-2024-07-0036",
+          "title": "이중대역 적외선 센서 기반 미사일 탐지 기술",
+          "score": 100
+        },
+        {
+          "id": "R-2024-12-0009",
+          "title": "저피탐 무인비행체 탑재 매립형 EOTS 설계 기술",
+          "score": 86
+        },
+        {
+          "id": "R-2024-07-0026",
+          "title": "무인잠수정용 소형 장거리 고해상 수상감시정찰 기술",
+          "score": 82
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 0.5,
+        "reciprocalRank": 1,
+        "ndcgAt10": 0.9173194127129571,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-013",
+      "title": "대포병 레이더 AI 표적분류",
+      "riskTags": [
+        "paired-project",
+        "classification"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2024-07-0056",
+        "R-2024-07-0055"
+      ],
+      "topResults": [
+        {
+          "id": "R-2024-07-0056",
+          "title": "표적 탐지 정확도 향상 및 인공지능을 이용한 표적/비표적 분류/식별 기술",
+          "score": 97
+        },
+        {
+          "id": "R-2024-07-0055",
+          "title": "대포병 표적 특성 및 RCS/탄도 모의 기술",
+          "score": 90
+        },
+        {
+          "id": "R-2023-05-0024",
+          "title": "딥러닝을 이용한 온보드 SAR 표적식별 기술",
+          "score": 69
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 1,
+        "reciprocalRank": 1,
+        "ndcgAt10": 1,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-014",
+      "title": "저피탐 무인기 매립형 EOTS",
+      "riskTags": [
+        "weapon-system",
+        "optical-sensor"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2024-12-0009",
+        "R-2024-12-0001"
+      ],
+      "topResults": [
+        {
+          "id": "R-2024-12-0009",
+          "title": "저피탐 무인비행체 탑재 매립형 EOTS 설계 기술",
+          "score": 100
+        },
+        {
+          "id": "R-2024-08-0004",
+          "title": "영상기반 소형자폭무인기 다연장 발사 기술 개발",
+          "score": 59
+        },
+        {
+          "id": "R-2024-07-0026",
+          "title": "무인잠수정용 소형 장거리 고해상 수상감시정찰 기술",
+          "score": 56
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 0.5,
+        "reciprocalRank": 1,
+        "ndcgAt10": 0.9173194127129571,
+        "evidenceIntegrity": 1
+      }
+    },
+    {
+      "id": "EVAL-015",
+      "title": "무인잠수정 EO/IR 수상감시",
+      "riskTags": [
+        "same-platform-different-sensor",
+        "hard-negative"
+      ],
+      "labelStatus": "provisional",
+      "expectedIds": [
+        "R-2024-07-0026",
+        "R-2024-07-0048"
+      ],
+      "topResults": [
+        {
+          "id": "R-2024-07-0026",
+          "title": "무인잠수정용 소형 장거리 고해상 수상감시정찰 기술",
+          "score": 100
+        },
+        {
+          "id": "R-2017-10-0003",
+          "title": "무인잠수정용 대잠 탐지소나 기술",
+          "score": 60
+        },
+        {
+          "id": "R-2024-07-0036",
+          "title": "이중대역 적외선 센서 기반 미사일 탐지 기술",
+          "score": 58
+        }
+      ],
+      "metrics": {
+        "hitAt5": 1,
+        "recallAt10": 0.5,
+        "reciprocalRank": 1,
+        "ndcgAt10": 0.9173194127129571,
+        "evidenceIntegrity": 1
+      }
+    }
+  ]
+}
